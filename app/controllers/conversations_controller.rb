@@ -4,6 +4,7 @@ class ConversationsController < ApplicationController
   before_action :get_conversation, except: [:index]
 
   def index
+    p @mailbox.inbox
     @conversations = @mailbox.inbox
   end
 
